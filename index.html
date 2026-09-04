@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mom ❤️</title>
+
+<style>
+:root {
+    --pink: #ff4f9a;
+    --rose: #ff7187;
+    --purple: #9d5cff;
+    --white: #ffffff;
+    --muted: #c5bdc9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--white);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 79, 154, 0.2), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(157, 92, 255, 0.2), transparent 30%),
+        linear-gradient(135deg, #08050c, #160914 50%, #09060e);
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,.45) 1px, transparent 1px);
+    background-size: 90px 90px, 140px 140px;
+    background-position: 20px 20px, 60px 70px;
+    opacity: .35;
+    animation: starsMove 18s linear infinite;
+}
+
+@keyframes starsMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(90px);
+    }
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .28;
+    animation: orbFloat 8s ease-in-out infinite alternate;
+}
+
+.orb.one {
+    width: 280px;
+    height: 280px;
+    background: var(--pink);
+    top: -100px;
+    left: -100px;
+}
+
+.orb.two {
+    width: 300px;
+    height: 300px;
+    background: var(--purple);
+    right: -120px;
+    bottom: -100px;
+    animation-delay: 2s;
+}
+
+.orb.three {
+    width: 180px;
+    height: 180px;
+    background: var(--rose);
+    left: 45%;
+    top: 35%;
+    animation-delay: 4s;
+}
+
+@keyframes orbFloat {
+    to {
+        transform: translate(30px, -25px) scale(1.1);
+    }
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 20;
+}
+
+.brand {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.65);
+}
+
+.sound-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    color: white;
+    cursor: pointer;
+    font-size: 19px;
+    backdrop-filter: blur(10px);
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 85px 18px 30px;
+}
+
+.story-card {
+    position: relative;
+    width: min(94vw, 560px);
+    min-height: 690px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 42px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.11),
+        rgba(255,255,255,.035)
+    );
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.55),
+        inset 0 1px rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+}
+
+.progress-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,.08);
+    z-index: 5;
+}
+
+.progress-bar {
+    width: 12.5%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink), var(--purple));
+    transition: width .7s ease;
+}
+
+.scene {
+    min-height: 690px;
+    padding: 75px 38px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: sceneIn .8s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes sceneIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--pink);
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: clamp(27px, 6vw, 42px);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.gradient {
+    background: linear-gradient(
+        90deg,
+        #ff7db1,
+        #ffb0c2,
+        #b991ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    max-width: 420px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.big-icon {
+    font-size: 76px;
+    margin-bottom: 28px;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+.button-row {
+    display: flex;
+    gap: 13px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font: inherit;
+}
+
+.primary,
+.secondary {
+    min-width: 145px;
+    padding: 15px 24px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: .25s ease;
+}
+
+.primary {
+    border: 0;
+    color: white;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    box-shadow: 0 12px 35px rgba(255,79,154,.28);
+}
+
+.primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 18px 45px rgba(255,79,154,.4);
+}
+
+.secondary {
+    border: 1px solid rgba(255,255,255,.15);
+    color: white;
+    background: rgba(255,255,255,.06);
+}
+
+.secondary:hover {
+    background: rgba(255,255,255,.12);
+}
+
+.memory {
+    width: 100%;
+    max-width: 420px;
+    margin: 25px 0;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 25px;
+    background: rgba(255,255,255,.055);
+}
+
+.memory-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.memory p {
+    color: #d7d0d9;
+    line-height: 1.7;
+}
+
+.quote {
+    max-width: 430px;
+    margin: 25px 0;
+    padding: 25px 25px 25px 30px;
+    border-left: 3px solid var(--pink);
+    text-align: left;
+    color: #ddd4df;
+    font-size: 17px;
+    line-height: 1.8;
+    background: rgba(255,255,255,.04);
+    border-radius: 0 20px 20px 0;
+}
+
+.choice-box {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 25px;
+    padding: 24px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.05);
+}
+
+.final-scene {
+    background:
+        radial-gradient(circle at 50% 35%, rgba(255,79,154,.14), transparent 45%);
+}
+
+.final-heart {
+    font-size: 100px;
+    margin-bottom: 15px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+.signature {
+    margin-top: 28px;
+    color: #aaa0ad;
+    line-height: 1.8;
+}
+
+.signature span {
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.tiny {
+    margin-top: 20px;
+    color: rgba(255,255,255,.4);
+    font-size: 12px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 30;
+    animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+    from {
+        opacity: 0;
+        transform: translateY(0) scale(.6) rotate(0deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-110vh) scale(1.3) rotate(25deg);
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    z-index: 40;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .brand {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .story-card {
+        min-height: 650px;
+        border-radius: 32px;
+    }
+
+    .scene {
+        min-height: 650px;
+        padding: 65px 24px 35px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .big-icon {
+        font-size: 65px;
+    }
+
+    .primary,
+    .secondary {
+        min-width: 135px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background">
+    <div class="stars"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+</div>
+
+<header class="topbar">
+    <div class="brand">A LITTLE STORY FOR MOM ❤️</div>
+
+    <button
+        class="sound-button"
+        id="soundButton"
+        aria-label="Toggle sound"
+    >
+        ♪
+    </button>
+</header>
+
+<main class="app">
+
+<div class="story-card">
+
+<div class="progress-area">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<section class="scene" id="scene1">
+
+    <div class="big-icon">❤️</div>
+
+    <div class="eyebrow">Chapter One</div>
+
+    <h1>
+        Mom...
+        <br>
+        <span class="gradient">this is for you.</span>
+    </h1>
+
+    <p class="description">
+        This isn't just a card.
+        <br><br>
+        It's a tiny journey through some of the
+        reasons you mean so much to me.
+    </p>
+
+    <div class="button-row">
+        <button class="primary" id="startButton">
+            Begin ❤️
+        </button>
+    </div>
+
+    <div class="tiny">
+        Take your time... ✨
+    </div>
+
+</section>
+
+<section class="scene hidden" id="scene2">
+
+    <div class="big-icon">👶</div>
+
+    <div class="eyebrow">Chapter Two</div>
+
+    <h2>
+        Before I understood
+        <span class="gradient">the world...</span>
+    </h2>
+
+    <p class="description">
+        You were already there.
+        <br><br>
+        Teaching me my first lessons,
+        taking care of me,
+        and showing me what love feels like.
+    </p>
+
+    <div class="memory">
+        <div class="memory-icon">🏠</div>
+
+        <p>
+            No matter where life takes me,
+            a part of me will always think of
+            you as home.
+        </p>
+    </div>
+
+    <button class="primary nextButton">
+        Continue ✨
+    </button>
+
+</section>
+
+<section class="scene hidden" id="scene3">
+
+    <div class="big-icon">🛡️</div>
+
+    <div class="eyebrow">Chapter Three</div>
+
+    <h2>
+        Through the
+        <span class="gradient">tough days...</span>
+    </h2>
+
+    <div class="quote">
+        Whenever things felt difficult,
+        you somehow found a way to make
+        everything feel a little less scary.
+    </div>
+
+    <p class="description">
+        Maybe I didn't always say thank you.
+        <br><br>
+        But I noticed.
+        And I remember.
+    </p>
+
+    <button class="primary nextButton">
+        Keep going ❤️
+    </button>
+
+</section>
+
+<section class="scene hidden" id="scene4">
+
+    <div class="big-icon">🌸</div>
+
+    <div class="eyebrow">Chapter Four</div>
+
+    <h2>
+        It's the
+        <span class="gradient">little things.</span>
+    </h2>
+
+    <div class="memory">
+        <div class="memory-icon">☀️</div>
+
+        <p>
+            The small things you do every day
+            might seem ordinary...
+            but to me, they're everything.
+        </p>
+    </div>
+
+    <div class="memory">
+        <div class="memory-icon">🤗</div>
+
+        <p>
+            The care.
+            The advice.
+            The checking in.
+            The endless support.
+        </p>
+    </div>
+
+    <button class="primary nextButton">
+        One more ❤️
+    </button>
+
+</section>
+
+<section class="scene hidden" id="scene5">
+
+    <div class="big-icon">😂</div>
+
+    <div class="eyebrow">Chapter Five</div>
+
+    <h2>
+        And then there are
+        <span class="gradient">the funny moments.</span>
+    </h2>
+
+    <p class="description">
+        You gave me advice.
+        <br>
+        I pretended I wasn't listening.
+        <br>
+        You were right anyway. 😭
+    </p>
+
+    <div class="memory">
+        <div class="memory-icon">👩‍👦</div>
+
+        <p>
+            Mom:
+            "I told you so."
+            <br><br>
+            Me:
+            "Okay, okay... you win." 😂
+        </p>
+    </div>
+
+    <button class="primary nextButton">
+        Fair enough 😂
+    </button>
+
+</section>
+
+<section class="scene hidden" id="scene6">
+
+    <div class="big-icon">🥺</div>
+
+    <div class="eyebrow">Chapter Six</div>
+
+    <h2>
+        Okay Mom...
+        <br>
+        <span class="gradient">one question.</span>
+    </h2>
+
+    <p class="description">
+        And there is definitely
+        a correct answer.
+    </p>
+
+    <div class="choice-box">
+
+        <h2>
+            Do you know how much
+            <span class="gradient">I love you?</span> ❤️
+        </h2>
+
+        <div class="button-row">
+
+            <button class="primary" id="yesButton">
+                Yes ❤️
+            </button>
+
+            <button class="secondary" id="obviousButton">
+                Obviously 😎
+            </button>
+
+        </div>
+
+        <div class="tiny" id="choiceHint">
+            Choose wisely... 👀
+        </div>
+
+    </div>
+
+</section>
+
+<section class="scene hidden" id="scene7">
+
+    <div class="big-icon">💖</div>
+
+    <div class="eyebrow">Chapter Seven</div>
+
+    <h1>
+        I knew it!
+    </h1>
+
+    <h2>
+        But there's something
+        <span class="gradient">you should know.</span>
+    </h2>
+
+    <p class="description">
+        I probably don't say it enough.
+        <br><br>
+        I probably don't show it enough.
+        <br><br>
+        But I love you more than words
+        can properly explain.
+    </p>
+
+    <button class="primary" id="finalButton">
+        Read the last part ❤️
+    </button>
+
+</section>
+
+<section class="scene final-scene hidden" id="scene8">
+
+    <div class="final-heart">💖</div>
+
+    <div class="eyebrow">The Final Chapter</div>
+
+    <h1>
+        To The
+        <br>
+        <span class="gradient">Best Mom Ever</span>
+    </h1>
+
+    <h2>
+        I Love You, Mom ❤️
+    </h2>
+
+    <div class="quote">
+
+        Thank you for always being there for me.
+
+        <br><br>
+
+        Thank you for believing in me,
+        supporting me, guiding me,
+        and loving me no matter what.
+
+        <br><br>
+
+        You make ordinary days feel special
+        simply by being there.
+
+        <br><br>
+
+        I may not say it every day,
+        but I hope you always know
+        how much you mean to me.
+
+    </div>
+
+    <p class="description">
+
+        Whatever happens,
+        wherever life takes me,
+        you'll always have a very special
+        place in my heart.
+
+    </p>
+
+    <div class="signature">
+        With all my love,
+        <br>
+        <span>Gadha Das ❤️</span>
+    </div>
+
+    <div class="button-row">
+        <button class="primary" id="replayButton">
+            ↻ Watch Again
+        </button>
+    </div>
+
+</section>
+
+</div>
+</main>
+
+<script>
+const scenes = [
+    document.getElementById("scene1"),
+    document.getElementById("scene2"),
+    document.getElementById("scene3"),
+    document.getElementById("scene4"),
+    document.getElementById("scene5"),
+    document.getElementById("scene6"),
+    document.getElementById("scene7"),
+    document.getElementById("scene8")
+];
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const startButton =
+    document.getElementById("startButton");
+
+const yesButton =
+    document.getElementById("yesButton");
+
+const obviousButton =
+    document.getElementById("obviousButton");
+
+const finalButton =
+    document.getElementById("finalButton");
+
+const replayButton =
+    document.getElementById("replayButton");
+
+const choiceHint =
+    document.getElementById("choiceHint");
+
+const soundButton =
+    document.getElementById("soundButton");
+
+const nextButtons =
+    document.querySelectorAll(".nextButton");
+
+let currentScene = 1;
+let noAttempts = 0;
+let soundEnabled = true;
+let audioContext = null;
+
+function showScene(number) {
+    scenes.forEach(scene => {
+        scene.classList.add("hidden");
+    });
+
+    const scene = scenes[number - 1];
+
+    scene.classList.remove("hidden");
+
+    scene.style.animation = "none";
+
+    void scene.offsetWidth;
+
+    scene.style.animation = "sceneIn .8s ease";
+
+    currentScene = number;
+
+    const progress =
+        (number / scenes.length) * 100;
+
+    progressBar.style.width =
+        `${progress}%`;
+}
+
+function getAudioContext() {
+    if (!soundEnabled) {
+        return null;
+    }
+
+    if (!audioContext) {
+        const AudioContext =
+            window.AudioContext ||
+            window.webkitAudioContext;
+
+        if (!AudioContext) {
+            return null;
+        }
+
+        audioContext =
+            new AudioContext();
+    }
+
+    if (audioContext.state === "suspended") {
+        audioContext.resume();
+    }
+
+    return audioContext;
+}
+
+function playTone(
+    frequency,
+    duration = 0.2,
+    type = "sine",
+    volume = 0.1
+) {
+    const audio =
+        getAudioContext();
+
+    if (!audio) {
+        return;
+    }
+
+    const oscillator =
+        audio.createOscillator();
+
+    const gain =
+        audio.createGain();
+
+    oscillator.type = type;
+
+    oscillator.frequency.value =
+        frequency;
+
+    gain.gain.setValueAtTime(
+        0,
+        audio.currentTime
+    );
+
+    gain.gain.linearRampToValueAtTime(
+        volume,
+        audio.currentTime + 0.03
+    );
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        audio.currentTime + duration
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audio.destination);
+
+    oscillator.start();
+
+    oscillator.stop(
+        audio.currentTime + duration
+    );
+}
+
+function playTransitionSound() {
+    playTone(440, 0.12);
+
+    setTimeout(() => {
+        playTone(554.37, 0.14);
+    }, 100);
+
+    setTimeout(() => {
+        playTone(659.25, 0.18);
+    }, 200);
+}
+
+function playCelebrationSound() {
+    const notes = [
+        523.25,
+        659.25,
+        783.99,
+        1046.50,
+        1318.51
+    ];
+
+    notes.forEach((note, index) => {
+        setTimeout(() => {
+            playTone(
+                note,
+                0.5,
+                "sine",
+                0.12
+            );
+        }, index * 130);
+    });
+}
+
+function createHeart() {
+    const heart =
+        document.createElement("div");
+
+    const hearts = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💞",
+        "🌸",
+        "✨"
+    ];
+
+    heart.className = "heart";
+
+    heart.textContent =
+        hearts[
+            Math.floor(
+                Math.random() * hearts.length
+            )
+        ];
+
+    heart.style.left =
+        `${Math.random() * 100}vw`;
+
+    heart.style.fontSize =
+        `${16 + Math.random() * 25}px`;
+
+    heart.style.animationDuration =
+        `${5 + Math.random() * 5}s`;
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 11000);
+}
+
+function createHearts(amount = 35) {
+    for (let i = 0; i < amount; i++) {
+        setTimeout(() => {
+            createHeart();
+        }, i * 90);
+    }
+}
+
+function createConfetti(amount = 100) {
+    const symbols = [
+        "❤️",
+        "💖",
+        "💕",
+        "✨",
+        "🌸",
+        "🎉",
+        "💫",
+        "⭐",
+        "💗"
+    ];
+
+    for (let i = 0; i < amount; i++) {
+        setTimeout(() => {
+
+            const piece =
+                document.createElement("div");
+
+            piece.className =
+                "confetti";
+
+            piece.textContent =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+            piece.style.left =
+                `${Math.random() * 100}vw`;
+
+            piece.style.fontSize =
+                `${10 + Math.random() * 18}px`;
+
+            piece.style.animationDuration =
+                `${2.5 + Math.random() * 4}s`;
+
+            document.body.appendChild(piece);
+
+            setTimeout(() => {
+                piece.remove();
+            }, 7000);
+
+        }, i * 18);
+    }
+}
+
+startButton.addEventListener("click", () => {
+    playTransitionSound();
+
+    setTimeout(() => {
+        showScene(2);
+    }, 300);
+});
+
+nextButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        playTransitionSound();
+
+        const nextScene =
+            currentScene + 1;
+
+        if (nextScene <= scenes.length) {
+
+            setTimeout(() => {
+                showScene(nextScene);
+            }, 250);
+
+        }
+
+    });
+
+});
+
+yesButton.addEventListener("click", () => {
+
+    playCelebrationSound();
+
+    showScene(7);
+
+    createHearts(20);
+
+    setTimeout(() => {
+        createConfetti(45);
+    }, 400);
+
+});
+
+const obviousMessages = [
+    "WAIT 😭",
+    "YOU ALREADY KNOW?! 😂",
+    "OKAY SHOW-OFF 😎",
+    "FINE... YOU WIN ❤️",
+    "THAT'S MY MOM 😂❤️"
+];
+
+function moveObviousButton() {
+
+    noAttempts++;
+
+    const index =
+        Math.min(
+            noAttempts - 1,
+            obviousMessages.length - 1
+        );
+
+    obviousButton.textContent =
+        obviousMessages[index];
+
+    const x =
+        Math.random() * 180 - 90;
+
+    const y =
+        Math.random() * 130 - 65;
+
+    const rotation =
+        Math.random() * 16 - 8;
+
+    obviousButton.style.transform =
+        `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
+
+    choiceHint.textContent =
+        "That button is getting suspicious... 👀";
+
+    playTone(
+        220,
+        0.12,
+        "triangle"
+    );
+}
+
+obviousButton.addEventListener(
+    "mouseenter",
+    moveObviousButton
+);
+
+obviousButton.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+
+        moveObviousButton();
+
+    },
+    {
+        passive: false
+    }
+);
+
+obviousButton.addEventListener(
+    "click",
+    event => {
+
+        event.preventDefault();
+
+        moveObviousButton();
+
+    }
+);
+
+finalButton.addEventListener("click", () => {
+
+    playCelebrationSound();
+
+    showScene(8);
+
+    setTimeout(() => {
+
+        createHearts(50);
+
+        createConfetti(150);
+
+    }, 300);
+
+});
+
+replayButton.addEventListener("click", () => {
+
+    noAttempts = 0;
+
+    obviousButton.textContent =
+        "Obviously 😎";
+
+    obviousButton.style.transform =
+        "translate(0, 0) rotate(0deg)";
+
+    choiceHint.textContent =
+        "Choose wisely... 👀";
+
+    showScene(1);
+
+    playTone(440, 0.15);
+
+});
+
+soundButton.addEventListener("click", () => {
+
+    soundEnabled =
+        !soundEnabled;
+
+    soundButton.textContent =
+        soundEnabled ? "♫" : "♪";
+
+    if (soundEnabled) {
+        playCelebrationSound();
+    }
+
+});
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key !== "Enter") {
+            return;
+        }
+
+        if (currentScene === 1) {
+            startButton.click();
+            return;
+        }
+
+        if (
+            currentScene >= 2 &&
+            currentScene <= 5
+        ) {
+
+            const button =
+                scenes[currentScene - 1]
+                    .querySelector(".nextButton");
+
+            if (button) {
+                button.click();
+            }
+
+            return;
+        }
+
+        if (currentScene === 6) {
+            yesButton.click();
+            return;
+        }
+
+        if (currentScene === 7) {
+            finalButton.click();
+        }
+
+    }
+);
+
+showScene(1);
+</script>
+
+</body>
+</html>
